@@ -1,19 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-$fundoPrincipal: #1B1F2B;
-$card-color: #2E3440;
-$text-primary: #ECEFF4;
-$text-secundary: #D8DEE9;
-$acoes-principais: #8F3AFF;
-$acoes-hover: #00FFF7;
-$erro: 	#BF616A;
-$sucesso: #A3BE8C;
-
-
-$font-title: 'Rajdhani', sanf-serif;
-$font-text: 'Poppins', sanf-serif;
-$font-score: 'Orbtron', sanf-serif;
-
 * {
   padding: 0;
   margin: 0;
@@ -23,4 +9,6 @@ $font-score: 'Orbtron', sanf-serif;
 body {
   width: 100%;
   height: 100vh;
+  background: $fundoPrincipal;
+  color: $text-primary;
 }
