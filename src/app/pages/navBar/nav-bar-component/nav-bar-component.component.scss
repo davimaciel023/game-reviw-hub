@@ -8,11 +8,18 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 15px 0;
 
     nav, ul {
       display: flex;
       gap: 50px;
       color: $text-primary;
+      list-style: none;
+
+      a {
+        padding: 5px;
+        text-decoration: none;
+      }
     }
   }
 }
