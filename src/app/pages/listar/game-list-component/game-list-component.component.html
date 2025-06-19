@@ -6,8 +6,15 @@
       <img [src]="jogo.imagem" alt="">
       <h3>{{ jogo.title }}</h3>
       <p> {{ jogo.genre }} </p>
-      <p-rating [stars]="5" ></p-rating>
-      <p>Average:</p>
+      <p-rating
+        [stars]="5"
+        [ngModel]="mediaAvaliacao(jogo)"
+        [readonly]="true"
+        [cancel]="false"
+        [disabled]="true"
+
+        ></p-rating>
+      <small>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }} </small>
       <button class="btn" (click)="avaliacoes()">Adicionar Avaliação</button>
     </div>
   </div>

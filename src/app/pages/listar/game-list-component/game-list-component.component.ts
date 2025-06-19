@@ -10,9 +10,10 @@ import { Game } from '../../../interfaces/gameInterfaces.models';
 
 @Component({
   selector: 'app-game-list-component',
+  standalone: true,
   imports: [CommonModule, RatingModule, FormsModule],
   templateUrl: './game-list-component.component.html',
-  styleUrl: './game-list-component.component.scss'
+  styleUrl: './game-list-component.component.scss',
 })
 export class GameListComponentComponent {
 
@@ -40,6 +41,15 @@ export class GameListComponentComponent {
 
   avaliacoes(){
     this.router.navigate([`/games/${this.gameID}/avaliar`])
+  }
+
+  mediaAvaliacao(jogo: Game): number {
+    if(!jogo.ratings || jogo.ratings.length === 0) return 0
+
+    const total = jogo.ratings.reduce((soma, avaliacoes) =>
+      soma + avaliacoes.stars, 0)
+
+    return total / jogo.ratings.length
   }
 
 }
