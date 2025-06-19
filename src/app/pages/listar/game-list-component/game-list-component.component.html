@@ -6,13 +6,13 @@
       <img [src]="jogo.imagem" alt="">
       <h3>{{ jogo.title }}</h3>
       <p> {{ jogo.genre }} </p>
-      <p-rating [stars]="5"></p-rating>
+      <p-rating [stars]="5" ></p-rating>
       <p>Average:</p>
     </div>
   </div>
 
   <div class="btn">
-    <button>Cadastrar Game</button>
+    <button (click)="cadastrar()">Cadastrar Game</button>
   </div>
 
 </section>

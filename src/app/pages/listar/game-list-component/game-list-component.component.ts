@@ -29,4 +29,8 @@ export class GameListComponentComponent {
     })
   }
 
+  cadastrar() {
+    this.router.navigate(['/form'])
+  }
+
 }

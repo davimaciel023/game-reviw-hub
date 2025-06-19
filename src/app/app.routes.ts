@@ -3,6 +3,7 @@ import { GameListComponentComponent } from './pages/listar/game-list-component/g
 import { GameDetailComponentComponent } from './pages/detalhes/game-detail-component/game-detail-component.component';
 import { GameFormComponentComponent } from './pages/form/game-form-component/game-form-component.component';
 import { TopGamesComponentComponent } from './pages/topGames/top-games-component/top-games-component.component';
+import { RatingFormComponentComponent } from './pages/rating/rating-form-component/rating-form-component.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'topGames',
     component: TopGamesComponentComponent
+  },
+  {
+    path: 'formRatigns',
+    component: RatingFormComponentComponent
   }
 ];

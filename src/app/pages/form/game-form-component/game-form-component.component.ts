@@ -47,4 +47,8 @@ export class GameFormComponentComponent {
     }
   }
 
+  cancelar() {
+    this.router.navigate(['/listar'])
+  }
+
 }
