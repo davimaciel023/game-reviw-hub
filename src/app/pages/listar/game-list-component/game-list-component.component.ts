@@ -13,7 +13,4 @@ import { FormsModule } from '@angular/forms';
 })
 export class GameListComponentComponent {
 
-  cancel: boolean = false
-  value: number = 3
-
 }
