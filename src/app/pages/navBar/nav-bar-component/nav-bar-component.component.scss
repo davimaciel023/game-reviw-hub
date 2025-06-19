@@ -3,22 +3,30 @@
 header {
   width: 100%;
   height: 12vh;
+  font-family: $font-title;
 
   .navBar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px 0;
+    border-bottom: 1px solid $text-primary;
 
     nav, ul {
       display: flex;
       gap: 50px;
-      color: $text-primary;
       list-style: none;
 
       a {
+        color: $acoes-principais;
         padding: 5px;
         text-decoration: none;
+        font-size: 1.5rem;
+        transition: .5s;
+
+        &:hover {
+          color: $acoes-hover;
+        }
       }
     }
   }
