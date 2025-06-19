@@ -2,10 +2,10 @@
 
   <div class="games">
     <h1>Games</h1>
-    <div class="card">
-      <img src="" alt="">
-      <h3>game title</h3>
-      <p>genre</p>
+    <div class="card" *ngFor="let jogo of game">
+      <img [src]="jogo.imagem" alt="">
+      <h3>{{ jogo.title }}</h3>
+      <p> {{ jogo.genre }} </p>
       <p-rating [stars]="5"></p-rating>
       <p>Average:</p>
     </div>

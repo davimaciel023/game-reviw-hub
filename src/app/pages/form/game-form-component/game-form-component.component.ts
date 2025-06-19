@@ -42,6 +42,8 @@ export class GameFormComponentComponent {
           console.log("Erro ao cadastrar jogo: ", erro);
         }
       })
+
+      this.router.navigate(['/listar'])
     }
   }
 
