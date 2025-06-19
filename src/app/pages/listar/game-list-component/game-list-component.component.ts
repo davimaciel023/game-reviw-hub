@@ -2,7 +2,7 @@ import { RatingModule } from 'primeng/rating';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GameServiceService } from '../../../servicos/game-service.service';
 import { Game } from '../../../interfaces/gameInterfaces.models';
 
@@ -17,20 +17,29 @@ import { Game } from '../../../interfaces/gameInterfaces.models';
 export class GameListComponentComponent {
 
   game: Game[] = []
+  gameID: string = ''
 
   constructor(
     private router: Router,
-    private service: GameServiceService
+    private service: GameServiceService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.service.getGames().subscribe((games) => {
       this.game = games
     })
+
+    this.gameID = String(this.route.snapshot.paramMap.get('id'))
+
   }
 
   cadastrar() {
     this.router.navigate(['/form'])
+  }
+
+  avaliacoes(){
+    this.router.navigate([`/games/${this.gameID}/avaliar`])
   }
 
 }

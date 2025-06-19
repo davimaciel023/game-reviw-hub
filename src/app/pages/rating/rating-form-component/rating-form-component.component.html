@@ -1,1 +1,21 @@
-<p>rating-form-component works!</p>
+<section>
+
+  <h1>Criar Avaliação</h1>
+
+  <form [formGroup]="form">
+
+    <label for="name">Seu nome: </label>
+    <input type="text" formControlName="name" id="name" placeholder="Digite seu nome">
+
+    <label for="stars">
+      Nota:
+      <p-rating formControlNames="stars" ></p-rating>
+    </label>
+
+    <label for="comment">Comentário</label>
+    <textarea formControlName="comment" id="comment" placeholder="Deixe seu comentário"></textarea>
+
+  </form>
+
+</section>
+
