@@ -1,0 +1,19 @@
+{
+  "games": [
+  {
+    "id": 1,
+    "title": "God of War",
+    "genre": "Ação",
+    "description": "Kratos embarca numa jornada brutal...",
+    "platform": "PlayStation",
+    "image": "https://link-da-capa.jpg",
+    "ratings": [
+      {
+      "name": "João",
+      "stars": 5,
+      "comment": "Jogo incrível!"
+      }
+    ]
+  }
+  ]
+}
