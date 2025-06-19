@@ -3,7 +3,7 @@ import { GameServiceService } from '../../../servicos/game-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Rating, RatingModule } from 'primeng/rating';
+import { RatingModule } from 'primeng/rating';
 
 @Component({
   selector: 'app-rating-form-component',

@@ -7,11 +7,11 @@
       <h3>{{ jogo.title }}</h3>
       <p> {{ jogo.genre }} </p>
       <p-rating
-        [stars]="5"
-        [ngModel]="mediaAvaliacao(jogo)"
-        [readonly]="true"
-        [cancel]="false"
-        [disabled]="true"
+      [ngModel]="mediaAvaliacao(jogo)"
+      [readonly]="true"
+      [cancel]="false"
+      [stars]="5"
+      [disabled]="true"
 
         ></p-rating>
       <small>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }} </small>
