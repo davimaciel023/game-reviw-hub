@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Game } from '../interfaces/gameInterfaces.models';
-import { Observable } from 'rxjs';
+import { Ratings } from '../interfaces/ratings.models';
+import { Observable, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,18 @@ export class GameServiceService {
     return this.http.delete<void>(`${this.API_URL}/${id}`)
   }
 
-  // criarAvaliacao(id: string, avaliacao: any): Observable<>
+  criarAvaliacao(id: string, rating: Ratings): Observable<Game> {
+    return this.http.get<Game>(`${this.API_URL}/${id}`).pipe(
+      switchMap((game) => {
+        if(!game.ratings) {
+          game.ratings = []
+        }
+
+        game.ratings.push(rating);
+
+        return this.http.put<Game>(`${this.API_URL}/${id}`, game)
+      })
+    )
+  }
 
 }

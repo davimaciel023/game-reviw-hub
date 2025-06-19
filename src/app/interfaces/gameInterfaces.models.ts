@@ -1,3 +1,5 @@
+import { Ratings } from "./ratings.models"
+
 export interface Game {
   id: string
   title: string
@@ -5,11 +7,6 @@ export interface Game {
   description: string
   platform: string
   imagem: string
-  ratings: []
+  ratings?: Ratings[]
 }
 
-export interface Ratings {
-  name: string
-  stars: number
-  comment: string
-}

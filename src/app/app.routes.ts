@@ -28,7 +28,7 @@ export const routes: Routes = [
     component: TopGamesComponentComponent
   },
   {
-    path: 'formRatigns',
+    path: 'games/:id/avaliar',
     component: RatingFormComponentComponent
   }
 ];
