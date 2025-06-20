@@ -54,6 +54,8 @@ export class RatingFormComponentComponent {
           console.log("Erro ao criar avaliação", erro);
         }
       })
+
+      this.router.navigate(['/listar'])
     }
   }
 

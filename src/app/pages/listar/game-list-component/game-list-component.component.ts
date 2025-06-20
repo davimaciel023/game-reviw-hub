@@ -52,4 +52,12 @@ export class GameListComponentComponent {
     return total / jogo.ratings.length
   }
 
+  editar() {
+
+  }
+
+  excluir() {
+
+  }
+
 }
