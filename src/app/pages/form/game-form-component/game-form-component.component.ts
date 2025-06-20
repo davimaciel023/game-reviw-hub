@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { GameServiceService } from '../../../servicos/game-service.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-form-component',
@@ -13,11 +13,14 @@ import { Router } from '@angular/router';
 export class GameFormComponentComponent {
 
   form: FormGroup;
+  gameId: string = ''
+  titulo: string = ''
 
   constructor(
     private fb: FormBuilder,
     private service: GameServiceService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.form = this.fb.group({
       title: ['', Validators.required],
@@ -29,6 +32,13 @@ export class GameFormComponentComponent {
   }
 
   ngOnInit(): void {
+    this.gameId = this.route.snapshot.paramMap.get('id') ?? ''
+
+    if(this.gameId) {
+      this.service.pegarPorId(this.gameId).subscribe((game) => {
+        this.form.patchValue(game)
+      })
+    }
   }
 
   cadastrar() {
