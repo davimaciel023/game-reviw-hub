@@ -52,8 +52,8 @@ export class GameListComponentComponent {
     return total / jogo.ratings.length
   }
 
-  editar() {
-    this.router.navigate(['/form'])
+  editar(jogo: Game) {
+    this.router.navigate(['/form/', jogo.id])
   }
 
   excluir() {

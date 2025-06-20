@@ -33,10 +33,12 @@ export class GameFormComponentComponent {
 
   ngOnInit(): void {
     this.gameId = this.route.snapshot.paramMap.get('id') ?? ''
+    console.log('id game', this.gameId);
 
     if(this.gameId) {
       this.titulo = 'Editar Game'
       this.service.pegarPorId(this.gameId).subscribe((game) => {
+        console.log('carregando dados: ', game);
         this.form.patchValue(game)
       })
     }
@@ -51,18 +53,23 @@ export class GameFormComponentComponent {
 
     const dados = this.form.value
 
-    if(this.gameId) {
-
-      this.service.editarGame(this.gameId, dados).subscribe({
-        next: (res) => {
-          alert(`Game editado com sucerro`)
-          this.router.navigate(['/listar'])
-        },
-        error: (err) => {
-          console.log(`Erro na edição: ${err}`);
-        }
-      })
-
+    if (this.gameId) {
+      // Carrega o jogo atual para não perder as avaliações
+      this.service.pegarPorId(this.gameId).subscribe((gameAtual) => {
+        const jogoAtualizado = {
+          ...gameAtual,
+          ...dados
+        };
+        this.service.editarGame(this.gameId, jogoAtualizado).subscribe({
+          next: (res) => {
+            alert(`Game editado com sucesso!`);
+            this.router.navigate(['/listar']);
+          },
+          error: (err) => {
+            console.log(`Erro na edição: ${err}`);
+          }
+        });
+      });
     } else {
       this.service.cadastrarGame(dados).subscribe({
         next: (resposta) => {

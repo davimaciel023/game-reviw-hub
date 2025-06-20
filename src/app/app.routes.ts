@@ -24,6 +24,10 @@ export const routes: Routes = [
     component: GameFormComponentComponent
   },
   {
+    path: 'form/:id',
+    component: GameFormComponentComponent
+  },
+  {
     path: 'topGames',
     component: TopGamesComponentComponent
   },

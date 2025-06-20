@@ -1,32 +1,352 @@
 {
   "games": [
     {
-      "id": "1",
       "title": "God of War",
       "genre": "Ação",
-      "description": "Kratos embarca numa jornada brutal...",
+      "description": "Kratos e Atreus partem para uma aventura brutal e emocionante pelos Nove Reinos.",
       "platform": "PlayStation",
-      "imagem": "https://tse2.mm.bing.net/th?id=OIP.Kym4yHEF-0yLX5gUE1zEJgHaEK&pid=Api&P=0&h=180",
+      "imagem": "https://cdn.wallpapersafari.com/94/46/txfB43.jpg",
+      "id": "1",
       "ratings": [
         {
           "name": "João",
           "stars": 5,
-          "comment": "Jogo incrível!"
+          "comment": "Épico e emocionante, não dá pra parar de jogar!"
+        },
+        {
+          "name": "Mariana",
+          "stars": 5,
+          "comment": "Gráficos lindos e roteiro sensacional."
+        },
+        {
+          "name": "Rafael",
+          "stars": 4,
+          "comment": "Muito bom, mas poderia ter mais missões secundárias."
+        },
+        {
+          "name": "Clara",
+          "stars": 5,
+          "comment": "A relação entre Kratos e Atreus é fantástica."
+        },
+        {
+          "name": "Leo",
+          "stars": 4,
+          "comment": "Combate ótimo, mas às vezes repetitivo."
         }
       ]
     },
     {
-      "id": "bab9",
-      "title": "Fifa",
-      "genre": "Futebol",
-      "description": "É um jogo de futebol",
-      "platform": "Playstation",
-      "imagem": "https://tse3.mm.bing.net/th?id=OIP.oRiyWIOceqJzXsnfzR5fbwHaHa&pid=Api&P=0&h=180",
+      "title": "The Witcher 3",
+      "genre": "RPG",
+      "description": "Geralt de Rivia enfrenta monstros e forças obscuras para encontrar Ciri.",
+      "platform": "Multiplataforma",
+      "imagem": "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png?w=960&h=960",
+      "id": "2",
       "ratings": [
         {
-          "name": "Davi Maciel ",
+          "name": "Miguel",
           "stars": 5,
-          "comment": "safs"
+          "comment": "Um dos melhores RPGs que joguei."
+        },
+        {
+          "name": "Sara",
+          "stars": 5,
+          "comment": "História e mundo ricos e envolventes."
+        },
+        {
+          "name": "Pedro",
+          "stars": 4,
+          "comment": "Boa jogabilidade e gráficos lindos."
+        },
+        {
+          "name": "Ana",
+          "stars": 5,
+          "comment": "Personagens e missões simplesmente memoráveis."
+        },
+        {
+          "name": "Marcos",
+          "stars": 5,
+          "comment": "Perfeito para quem ama fantasia e ação."
+        }
+      ]
+    },
+    {
+      "title": "Horizon Zero Dawn",
+      "genre": "Aventura",
+      "description": "Aloy luta para sobreviver e descobrir o mistério por trás das máquinas e da antiga civilização.",
+      "platform": "PlayStation",
+      "imagem": "https://www.gamezawy.com/wp-content/uploads/2024/10/Horizon-Zero-Dawn-Remastered.jpeg",
+      "id": "3",
+      "ratings": [
+        {
+          "name": "Carla",
+          "stars": 5,
+          "comment": "Incrível! História e jogabilidade perfeitas."
+        },
+        {
+          "name": "Thiago",
+          "stars": 4,
+          "comment": "Mundo enorme e cheio de detalhes."
+        },
+        {
+          "name": "Julia",
+          "stars": 5,
+          "comment": "Aloy é uma das melhores protagonistas dos games."
+        },
+        {
+          "name": "Matheus",
+          "stars": 4,
+          "comment": "Bonito e divertido, mas poderia melhorar no combate."
+        },
+        {
+          "name": "Lucas",
+          "stars": 5,
+          "comment": "Trilha sonora e ambientação são sensacionais."
+        }
+      ]
+    },
+    {
+      "title": "Cyberpunk 2077",
+      "genre": "RPG",
+      "description": "Explore Night City e enfrente corporações e gangues em uma cidade futurista.",
+      "platform": "Multiplataforma",
+      "imagem": "https://www.cyberpunk.net/build/images/social-thumbnail-en-ddcf4d23.jpg",
+      "id": "4",
+      "ratings": [
+        {
+          "name": "Roberto",
+          "stars": 4,
+          "comment": "Boa história e atmosfera única."
+        },
+        {
+          "name": "Mariana",
+          "stars": 3,
+          "comment": "Tem muitos bugs, mas diverte bastante."
+        },
+        {
+          "name": "Renato",
+          "stars": 5,
+          "comment": "A ambientação de Night City é insuperável."
+        },
+        {
+          "name": "Luciana",
+          "stars": 4,
+          "comment": "Apesar dos erros, é uma ótima experiência."
+        },
+        {
+          "name": "Sérgio",
+          "stars": 5,
+          "comment": "Combate e trilha sonora perfeitos para o clima cyberpunk."
+        }
+      ]
+    },
+    {
+      "title": "Forza Horizon 5",
+      "genre": "Corrida",
+      "description": "Explore as paisagens vibrantes do México e participe de corridas emocionantes.",
+      "platform": "Xbox/PC",
+      "imagem": "https://img.hype.games/cdn/b8a3b6d1-0ba9-4161-bf87-12dc27d18254Cover_ForzaHorizon5Edi%C3%A7%C3%A3oSuprema.jpg",
+      "id": "5",
+      "ratings": [
+        {
+          "name": "Leonardo",
+          "stars": 5,
+          "comment": "Simplesmente perfeito para quem ama velocidade."
+        },
+        {
+          "name": "Joana",
+          "stars": 5,
+          "comment": "Visual deslumbrante e muita diversão nas corridas."
+        },
+        {
+          "name": "Hugo",
+          "stars": 4,
+          "comment": "Boa física e muitos carros para explorar."
+        },
+        {
+          "name": "Marcos",
+          "stars": 5,
+          "comment": "O mapa do México é enorme e cheio de detalhes."
+        },
+        {
+          "name": "Helena",
+          "stars": 5,
+          "comment": "A melhor experiência de corrida que tive."
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us Part II",
+      "genre": "Aventura",
+      "description": "Ellie busca vingança em um mundo pós-apocalíptico cheio de perigos e dilemas morais.",
+      "platform": "PlayStation",
+      "imagem": "https://pixelz.cc/wp-content/uploads/2024/02/the-last-of-us-part-2-remastered-ellie-uhd-4k-wallpaper.jpg",
+      "id": "6",
+      "ratings": [
+        {
+          "name": "Rafaela",
+          "stars": 5,
+          "comment": "Narrativa e jogabilidade impecáveis."
+        },
+        {
+          "name": "Guilherme",
+          "stars": 5,
+          "comment": "Personagens profundos e roteiro emocionante."
+        },
+        {
+          "name": "Bruna",
+          "stars": 5,
+          "comment": "Um dos melhores jogos que joguei na vida."
+        },
+        {
+          "name": "Marcelo",
+          "stars": 4,
+          "comment": "Muito intenso e brutal, mas vale cada minuto."
+        },
+        {
+          "name": "Vanessa",
+          "stars": 5,
+          "comment": "Experiência única e memorável para quem ama boas histórias."
+        }
+      ]
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "genre": "Ação",
+      "description": "Aventure-se no Velho Oeste com Arthur Morgan e a gangue Van der Linde.",
+      "platform": "Multiplataforma",
+      "imagem": "https://images.hdqwalls.com/wallpapers/red-dead-redemption-2-game-characters-cc.jpg",
+      "id": "7",
+      "ratings": [
+        {
+          "name": "Marcela",
+          "stars": 5,
+          "comment": "Um dos melhores mundos abertos que existem."
+        },
+        {
+          "name": "André",
+          "stars": 5,
+          "comment": "História fantástica e gráficos lindíssimos."
+        },
+        {
+          "name": "Marina",
+          "stars": 4,
+          "comment": "Boa jogabilidade e ótima atmosfera western."
+        },
+        {
+          "name": "Júlio",
+          "stars": 5,
+          "comment": "Personagens marcantes e uma trilha sonora única."
+        },
+        {
+          "name": "Isabela",
+          "stars": 5,
+          "comment": "Experiência única e tão imersiva que parece um filme."
+        }
+      ]
+    },
+    {
+      "title": "Assassin's Creed Valhalla",
+      "genre": "Aventura",
+      "description": "Explore a era Viking com Eivor e enfrente forças para conquistar a Inglaterra.",
+      "platform": "Multiplataforma",
+      "imagem": "https://image.jeuxvideo.com/medias/158826/1588264397-5261-jaquette-avant.jpg",
+      "id": "8",
+      "ratings": [
+        {
+          "name": "Ricardo",
+          "stars": 5,
+          "comment": "Boa ambientação e muita ação para quem ama a saga."
+        },
+        {
+          "name": "Mariana",
+          "stars": 4,
+          "comment": "Missões divertidas e uma ótima trilha sonora."
+        },
+        {
+          "name": "Lucas",
+          "stars": 5,
+          "comment": "Combate e exploração tornam o jogo muito imersivo."
+        },
+        {
+          "name": "Sabrina",
+          "stars": 5,
+          "comment": "A era viking foi retratada com perfeição, amei demais."
+        },
+        {
+          "name": "Henrique",
+          "stars": 4,
+          "comment": "Boa história e visuais incríveis para quem gosta do gênero."
+        }
+      ]
+    },
+    {
+      "title": "Ghost of Tsushima",
+      "genre": "Aventura",
+      "description": "Proteja a ilha de Tsushima contra invasores mongóis como Jin Sakai, o Fantasma.",
+      "platform": "PlayStation",
+      "imagem": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/09/ghost-of-tsushima-poster.jpg",
+      "id": "9",
+      "ratings": [
+        {
+          "name": "Fernando",
+          "stars": 5,
+          "comment": "Uma homenagem à cultura samurai, simplesmente perfeito."
+        },
+        {
+          "name": "Mariana",
+          "stars": 5,
+          "comment": "Combate épico e mapa lindíssimo para explorar."
+        },
+        {
+          "name": "Rafa",
+          "stars": 4,
+          "comment": "História envolvente e atmosfera única do Japão feudal."
+        },
+        {
+          "name": "Clara",
+          "stars": 5,
+          "comment": "Combate técnico e história emocionante. Um dos melhores exclusivos."
+        },
+        {
+          "name": "André",
+          "stars": 5,
+          "comment": "Aventura e beleza visual como poucos jogos conseguem oferecer."
+        }
+      ]
+    },
+    {
+      "title": "FIFA 23",
+      "genre": "Esporte",
+      "description": "Experimente a paixão do futebol com gráficos realistas e jogabilidade aprimorada.",
+      "platform": "Multiplataforma",
+      "imagem": "https://image.api.playstation.com/vulcan/ap/rnd/202207/0515/BOwvC0Q9dfw6QhGvX9dd13Sr.jpg",
+      "id": "10",
+      "ratings": [
+        {
+          "name": "Robson",
+          "stars": 5,
+          "comment": "Simulação de futebol no seu auge. Melhor FIFA até agora!"
+        },
+        {
+          "name": "Mariana",
+          "stars": 4,
+          "comment": "Boa jogabilidade e atualizações constantes."
+        },
+        {
+          "name": "Bruno",
+          "stars": 5,
+          "comment": "Experiência divertida para quem ama futebol."
+        },
+        {
+          "name": "Juliana",
+          "stars": 5,
+          "comment": "Boa atmosfera e atualizações visuais para cada partida."
+        },
+        {
+          "name": "Marcelo",
+          "stars": 5,
+          "comment": "Futebol para todas as idades e níveis de habilidade. Melhorou muito."
         }
       ]
     }
