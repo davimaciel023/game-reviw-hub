@@ -34,7 +34,11 @@ export class RatingFormComponentComponent {
   ngOnInit(): void {}
 
   cadastrar() {
+    console.log(`verificando formulario`);
     if(this.form.valid) {
+
+      console.log(`Formulario validado: ${this.form.value}`);
+
       const avaliacao = this.form.value
 
       this.service.criarAvaliacao(this.gameId, avaliacao).subscribe({
@@ -48,5 +52,9 @@ export class RatingFormComponentComponent {
         }
       })
     }
+  }
+
+  cancelar() {
+    this.router.navigate(['/listar'])
   }
 }
