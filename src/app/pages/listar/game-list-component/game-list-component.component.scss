@@ -63,6 +63,7 @@ section {
           display: flex;
           justify-content: space-around;
           padding: 1rem;
+          gap: 15px;
 
           button {
             background-color: $acoes-principais;
@@ -73,8 +74,9 @@ section {
             cursor: pointer;
             transition: background 0.3s;
 
-            &hover {
+            &:hover {
               background-color: $acoes-hover;
+              color: $fundoPrincipal;
             }
           }
         }
