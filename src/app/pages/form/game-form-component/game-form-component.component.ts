@@ -14,7 +14,7 @@ export class GameFormComponentComponent {
 
   form: FormGroup;
   gameId: string = ''
-  titulo: string = ''
+  titulo: string = 'Cadastrar Game'
 
   constructor(
     private fb: FormBuilder,
@@ -35,6 +35,7 @@ export class GameFormComponentComponent {
     this.gameId = this.route.snapshot.paramMap.get('id') ?? ''
 
     if(this.gameId) {
+      this.titulo = 'Editar Game'
       this.service.pegarPorId(this.gameId).subscribe((game) => {
         this.form.patchValue(game)
       })
@@ -42,9 +43,28 @@ export class GameFormComponentComponent {
   }
 
   cadastrar() {
-    if(this.form.valid) {
-      const novoJogo = this.form.value
-      this.service.cadastrarGame(novoJogo).subscribe({
+
+    if(this.form.invalid) {
+      alert(`Formulário inválido`)
+      return
+    }
+
+    const dados = this.form.value
+
+    if(this.gameId) {
+
+      this.service.editarGame(this.gameId, dados).subscribe({
+        next: (res) => {
+          alert(`Game editado com sucerro`)
+          this.router.navigate(['/listar'])
+        },
+        error: (err) => {
+          console.log(`Erro na edição: ${err}`);
+        }
+      })
+
+    } else {
+      this.service.cadastrarGame(dados).subscribe({
         next: (resposta) => {
           console.log("Jogo cadastrado com sucesso: ", resposta);
         },
@@ -54,6 +74,7 @@ export class GameFormComponentComponent {
       })
 
       this.router.navigate(['/listar'])
+
     }
   }
 

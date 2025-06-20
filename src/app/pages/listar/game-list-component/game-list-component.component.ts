@@ -53,7 +53,7 @@ export class GameListComponentComponent {
   }
 
   editar() {
-    this.router.navigate(['/'])
+    this.router.navigate(['/form'])
   }
 
   excluir() {

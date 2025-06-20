@@ -1,21 +1,24 @@
-<form [formGroup]="form" (ngSubmit)="cadastrar()">
-  <label for="titulo">Título</label>
-  <input type="text" formControlName="title" id="titulo">
+<section>
+  <h1>{{ titulo }}</h1>
+  <form [formGroup]="form" (ngSubmit)="cadastrar()">
+    <label for="titulo">Título</label>
+    <input type="text" formControlName="title" id="titulo">
 
-  <label for="genero">Gênero</label>
-  <input type="text" formControlName="genre" id="genero">
+    <label for="genero">Gênero</label>
+    <input type="text" formControlName="genre" id="genero">
 
-  <label for="descricao">Descrição</label>
-  <input type="text" formControlName="description" id="descricao">
+    <label for="descricao">Descrição</label>
+    <input type="text" formControlName="description" id="descricao">
 
-  <label for="imagem">Imagem</label>
-  <input type="text" formControlName="imagem" id="image">
+    <label for="imagem">Imagem</label>
+    <input type="text" formControlName="imagem" id="image">
 
-  <label for="plataforma">Plataforma</label>
-  <input type="text" formControlName="platform" id="plataforma">
+    <label for="plataforma">Plataforma</label>
+    <input type="text" formControlName="platform" id="plataforma">
 
-  <div class="btn">
-    <button type="submit">Salvar</button>
-    <button (click)="cancelar()">Cancelar</button>
-  </div>
-</form>
+    <div class="btn">
+      <button type="submit">Salvar</button>
+      <button (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</section>
