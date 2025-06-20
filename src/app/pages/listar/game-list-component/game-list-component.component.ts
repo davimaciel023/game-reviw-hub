@@ -39,8 +39,8 @@ export class GameListComponentComponent {
     this.router.navigate(['/form'])
   }
 
-  avaliacoes(){
-    this.router.navigate([`/games/${this.gameID}/avaliar`])
+  avaliacoes(jogo: Game){
+    this.router.navigate([`/games/${jogo.id}/avaliar`])
   }
 
   mediaAvaliacao(jogo: Game): number {

@@ -21,7 +21,14 @@
       "genre": "Futebol",
       "description": "É um jogo de futebol",
       "platform": "Playstation",
-      "imagem": "https://tse3.mm.bing.net/th?id=OIP.oRiyWIOceqJzXsnfzR5fbwHaHa&pid=Api&P=0&h=180"
+      "imagem": "https://tse3.mm.bing.net/th?id=OIP.oRiyWIOceqJzXsnfzR5fbwHaHa&pid=Api&P=0&h=180",
+      "ratings": [
+        {
+          "name": "Davi Maciel ",
+          "stars": 5,
+          "comment": "safs"
+        }
+      ]
     }
   ]
 }

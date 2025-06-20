@@ -2,21 +2,21 @@
 
   <h1>Criar Avaliação</h1>
 
-  <form [formGroup]="form">
+  <form [formGroup]="form" (ngSubmit)="cadastrar()">
 
     <label for="name">Seu nome: </label>
     <input type="text" formControlName="name" id="name" placeholder="Digite seu nome">
 
     <label for="stars">
       Nota:
-      <p-rating formControlNames="stars" ></p-rating>
+      <p-rating formControlName="stars" ></p-rating>
     </label>
 
     <label for="comment">Comentário</label>
     <textarea formControlName="comment" id="comment" placeholder="Deixe seu comentário"></textarea>
 
     <div class="btn">
-      <button (click)="cadastrar()">Cadastrar</button>
+      <button type="submit">Cadastrar</button>
       <button (click)="cancelar()">Cancelar</button>
     </div>
   </form>

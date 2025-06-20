@@ -22,7 +22,6 @@ export class RatingFormComponentComponent {
     private fb: FormBuilder,
     private route: ActivatedRoute
   ) {
-    this.gameId = String(this.route.snapshot.paramMap.get('id'))
 
     this.form = this.fb.group({
       name: ['', Validators.required],
@@ -31,9 +30,13 @@ export class RatingFormComponentComponent {
     })
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.gameId = String(this.route.snapshot.paramMap.get('id'))
+    console.log('ID capturado: ', this.gameId);
+  }
 
   cadastrar() {
+
     console.log(`verificando formulario`);
     if(this.form.valid) {
 
