@@ -2,6 +2,11 @@
 
   <div class="games">
     <h1>Games</h1>
+
+    <div class="btn">
+      <button (click)="cadastrar()">Cadastrar Game</button>
+    </div>
+
     <div class="card-container">
 
       <div class="card" *ngFor="let jogo of game">
@@ -28,9 +33,6 @@
     </div>
   </div>
 
-  <div class="btn">
-    <button (click)="cadastrar()">Cadastrar Game</button>
-  </div>
 
   <h1>Detalhes</h1>
   <div class="detalhes">
