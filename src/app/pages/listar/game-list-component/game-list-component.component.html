@@ -2,20 +2,29 @@
 
   <div class="games">
     <h1>Games</h1>
-    <div class="card" *ngFor="let jogo of game">
-      <img [src]="jogo.imagem" alt="">
-      <h3>{{ jogo.title }}</h3>
-      <p> {{ jogo.genre }} </p>
-      <p-rating
-      [ngModel]="mediaAvaliacao(jogo)"
-      [readonly]="true"
-      [cancel]="false"
-      [stars]="5"
-      [disabled]="true"
+    <div class="card-container">
 
-        ></p-rating>
-      <small>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }} </small>
-      <button class="btn" (click)="avaliacoes(jogo)">Adicionar Avaliação</button>
+      <div class="card" *ngFor="let jogo of game">
+        <img [src]="jogo.imagem" alt="">
+        <div class="info">
+          <h3>{{ jogo.title }}</h3>
+          <p> {{ jogo.genre }} </p>
+          <p-rating
+          [ngModel]="mediaAvaliacao(jogo)"
+          [readonly]="true"
+          [cancel]="false"
+          [stars]="5"
+          [disabled]="true"
+          ></p-rating>
+          <p>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }} </p>
+
+        </div>
+        <div class="acoes">
+          <button class="btn" (click)="avaliacoes(jogo)">Adicionar Avaliação</button>
+          <button class="btn" (click)="avaliacoes(jogo)">Editar</button>
+          <button class="btn" (click)="avaliacoes(jogo)">Excluir</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -28,10 +37,11 @@
       <h1>Detalhes</h1>
       <div class="tops">
         <button>Top 5 Games</button>
-        <button>Total Reviws</button>
+        <button>Todas as Reviws</button>
       </div>
       <div class="totalGame">
-        <h3></h3>
+        <h3>Total de Games</h3>
+        <p></p>
       </div>
     </section>
   </div>
