@@ -15,11 +15,10 @@
           <h3>{{ jogo.title }}</h3>
           <p> {{ jogo.genre }} </p>
           <p-rating
-          [ngModel]="mediaAvaliacao(jogo)"
-          [readonly]="true"
-          [cancel]="false"
-          [stars]="5"
-          [disabled]="true"
+            [ngModel]="mediaAvaliacao(jogo)"
+            [readonly]="true"
+            [cancel]="false"
+            [disabled]="true"
           ></p-rating>
           <p>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }} </p>
 
