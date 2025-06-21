@@ -349,6 +349,14 @@
           "comment": "Futebol para todas as idades e níveis de habilidade. Melhorou muito."
         }
       ]
+    },
+    {
+      "id": "486e",
+      "title": "Fortnite",
+      "genre": "Ação",
+      "description": "Jogo de tiro, que pode fazer construções para se  defender, jogo batleroyale",
+      "platform": "multiplataforma",
+      "imagem": "https://cdn2.unrealengine.com/15br-bplaunch-egs-s3-2560x1440-2560x1440-687570387.jpg"
     }
   ]
 }
