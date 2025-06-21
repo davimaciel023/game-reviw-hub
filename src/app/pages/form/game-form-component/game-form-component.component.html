@@ -4,6 +4,7 @@
     <label for="titulo">Nome do Jogo</label>
     <input type="text" formControlName="title" id="titulo" placeholder="Nome do jogo">
 
+    <label for="genre">Gênero</label>
     <select formControlName="genre" id="genre">
       <option value="">Selecione a categoria</option>
       <option value="acao">Ação</option>
@@ -20,7 +21,12 @@
     <input type="text" formControlName="imagem" id="image">
 
     <label for="plataforma">Plataforma</label>
-    <input type="text" formControlName="platform" id="plataforma">
+    <select formControlName="platform" id="platform">
+      <option value="">Selecione a plataforma</option>
+      <option value="playstation">PlayStation</option>
+      <option value="multiplataforma">Multiplataforma</option>
+      <option value="pc">Xbox/PC</option>
+    </select>
 
     <div class="btn">
       <button type="submit">Salvar</button>
