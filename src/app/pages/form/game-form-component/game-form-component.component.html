@@ -1,14 +1,20 @@
 <section>
   <h1>{{ titulo }}</h1>
   <form [formGroup]="form" (ngSubmit)="cadastrar()">
-    <label for="titulo">Título</label>
-    <input type="text" formControlName="title" id="titulo">
+    <label for="titulo">Nome do Jogo</label>
+    <input type="text" formControlName="title" id="titulo" placeholder="Nome do jogo">
 
-    <label for="genero">Gênero</label>
-    <input type="text" formControlName="genre" id="genero">
+    <select formControlName="genre" id="genre">
+      <option value="">Selecione a categoria</option>
+      <option value="acao">Ação</option>
+      <option value="rpg">RPG</option>
+      <option value="aventura">Aventura</option>
+      <option value="corrida">Corrida</option>
+      <option value="esporte">Esporte</option>
+    </select>
 
     <label for="descricao">Descrição</label>
-    <input type="text" formControlName="description" id="descricao">
+    <textarea formControlName="description" id="description" placeholder="Descrição do jogo"></textarea>
 
     <label for="imagem">Imagem</label>
     <input type="text" formControlName="imagem" id="image">
