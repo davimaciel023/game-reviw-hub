@@ -10,7 +10,10 @@
     <div class="card-container">
 
       <div class="card" *ngFor="let jogo of game">
-        <img [src]="jogo.imagem" alt="">
+        <div class="img-container">
+          <img [src]="jogo.imagem" alt="">
+          <button class="btn-detalhes">👁️</button>
+        </div>
 
 
         <div class="info">
