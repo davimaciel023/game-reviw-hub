@@ -281,41 +281,6 @@
       ]
     },
     {
-      "title": "Ghost of Tsushima",
-      "genre": "Aventura",
-      "description": "Proteja a ilha de Tsushima contra invasores mongóis como Jin Sakai, o Fantasma.",
-      "platform": "PlayStation",
-      "imagem": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/09/ghost-of-tsushima-poster.jpg",
-      "id": "9",
-      "ratings": [
-        {
-          "name": "Fernando",
-          "stars": 5,
-          "comment": "Uma homenagem à cultura samurai, simplesmente perfeito."
-        },
-        {
-          "name": "Mariana",
-          "stars": 5,
-          "comment": "Combate épico e mapa lindíssimo para explorar."
-        },
-        {
-          "name": "Rafa",
-          "stars": 4,
-          "comment": "História envolvente e atmosfera única do Japão feudal."
-        },
-        {
-          "name": "Clara",
-          "stars": 5,
-          "comment": "Combate técnico e história emocionante. Um dos melhores exclusivos."
-        },
-        {
-          "name": "André",
-          "stars": 5,
-          "comment": "Aventura e beleza visual como poucos jogos conseguem oferecer."
-        }
-      ]
-    },
-    {
       "title": "FIFA 23",
       "genre": "Esporte",
       "description": "Experimente a paixão do futebol com gráficos realistas e jogabilidade aprimorada.",

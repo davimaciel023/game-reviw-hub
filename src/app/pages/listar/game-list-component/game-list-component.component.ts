@@ -56,8 +56,15 @@ export class GameListComponentComponent {
     this.router.navigate(['/form/', jogo.id])
   }
 
-  excluir() {
-
+  excluir(jogo: Game) {
+    this.service.deletarGame(jogo.id).subscribe({
+      next: (res) => {
+        alert(`Item excluido com sucesso`)
+      },
+      error: (err) => {
+        console.log(`Erro ao excluir: ${err}`);
+      }
+    })
   }
 
 }
