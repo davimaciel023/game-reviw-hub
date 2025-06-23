@@ -11,8 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GameDetailComponentComponent {
 
-  game: Game[] = []
-  gameId: string = ''
+  game!: Game;
 
   constructor(
     private service: GameServiceService,
@@ -21,9 +20,18 @@ export class GameDetailComponentComponent {
   ) {}
 
   ngOnInit() {
-    this.gameId = String(this.route.snapshot.paramMap.get('id'))
+    const id = String(this.route.snapshot.paramMap.get('id'))
 
-    this.service.pegarPorId(this.gameId).subscribe()
+    this.service.pegarPorId(id).subscribe({
+      next: (game) => {
+        this.game = game
+      },
+      error: (err) => {
+        console.log('erro ao pegar game: ', err);
+        alert('Não foi possível carregar o jogo')
+        this.router.navigate(['/listar'])
+      }
+    })
   }
 
 }

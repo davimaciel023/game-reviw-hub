@@ -1,3 +1,11 @@
 <section>
-  <h1> {{ game }} </h1>
+  <div class="game-header">
+    <img [src]="game.imagem" alt="">
+    <div class="game-info">
+      <h1>{{ game.title }}</h1>
+      <p><strong>Gênero: </strong>{{ game.genre }}</p>
+      <p><strong>Plataforma: </strong>{{ game.platform }}</p>
+      <p><strong>Descrição: </strong>{{ game.description }}</p>
+    </div>
+  </div>
 </section>
