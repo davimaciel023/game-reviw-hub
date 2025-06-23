@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Game } from '../../../interfaces/gameInterfaces.models';
 
 @Component({
   selector: 'app-game-detail-component',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './game-detail-component.component.scss'
 })
 export class GameDetailComponentComponent {
+
+  game: Game
 
 }
