@@ -5,7 +5,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.2rem;
 
   .game-header {
     display: flex;
@@ -14,16 +14,29 @@ section {
     font-family: $font-title;
     gap: 2rem;
     background: $card-color;
-    width: 500px;
+    width: 400px;
     align-items: center;
     overflow: hidden;
+    border-radius: 1.5rem;
 
-    .img-container {
-      position: relative;
+    img {
       width: 100%;
+    }
 
-      img {
-        width: 100%;
+    .game-info {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      text-align: justify;
+      padding: 5px 1.5rem;
+      h1 {
+        font-size: 2rem;
+      }
+
+      strong {
+        font-size: 1.3rem;
       }
     }
   }
