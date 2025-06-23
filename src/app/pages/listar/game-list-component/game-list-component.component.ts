@@ -67,4 +67,7 @@ export class GameListComponentComponent {
     })
   }
 
+  detalhes(jogo: Game) {
+    this.router.navigate(['/details'])
+  }
 }

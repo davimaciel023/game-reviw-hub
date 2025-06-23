@@ -16,7 +16,7 @@ export const routes: Routes = [
     component: GameListComponentComponent
   },
   {
-    path: 'detalhes',
+    path: 'detalhes/:id',
     component: GameDetailComponentComponent
   },
   {
