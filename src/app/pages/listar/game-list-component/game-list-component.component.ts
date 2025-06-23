@@ -39,10 +39,6 @@ export class GameListComponentComponent {
     this.router.navigate(['/form'])
   }
 
-  avaliacoes(jogo: Game){
-    this.router.navigate([`/games/${jogo.id}/avaliar`])
-  }
-
   mediaAvaliacao(jogo: Game): number {
     if(!jogo.ratings || jogo.ratings.length === 0) return 0
 
@@ -50,6 +46,15 @@ export class GameListComponentComponent {
       soma + avaliacoes.stars, 0)
 
     return total / jogo.ratings.length
+  }
+
+
+  detalhes(jogo: Game) {
+    this.router.navigate([`/detalhes/${jogo.id}`])
+  }
+
+  avaliacoes(jogo: Game){
+    this.router.navigate([`/games/${jogo.id}/avaliar`])
   }
 
   editar(jogo: Game) {
@@ -65,9 +70,5 @@ export class GameListComponentComponent {
         console.log(`Erro ao excluir: ${err}`);
       }
     })
-  }
-
-  detalhes(jogo: Game) {
-    this.router.navigate([`/detalhes/${jogo.id}`])
   }
 }
