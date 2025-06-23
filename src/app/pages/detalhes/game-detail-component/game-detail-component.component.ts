@@ -9,6 +9,6 @@ import { Game } from '../../../interfaces/gameInterfaces.models';
 })
 export class GameDetailComponentComponent {
 
-  game: Game
+  game: Game[] = []
 
 }
