@@ -19,6 +19,7 @@ export class GameListComponentComponent {
 
   game: Game[] = []
   gameID: string = ''
+  totalGame: number = 0
 
   constructor(
     private router: Router,
@@ -32,6 +33,8 @@ export class GameListComponentComponent {
     })
 
     this.gameID = String(this.route.snapshot.paramMap.get('id'))
+
+    this.totalGame = this.game.length
 
   }
 
@@ -71,4 +74,5 @@ export class GameListComponentComponent {
       }
     })
   }
+
 }
