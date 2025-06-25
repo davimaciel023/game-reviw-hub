@@ -30,11 +30,11 @@ export class GameListComponentComponent {
   ngOnInit(): void {
     this.service.getGames().subscribe((games) => {
       this.game = games
+      this.totalGame = games.length
     })
 
     this.gameID = String(this.route.snapshot.paramMap.get('id'))
 
-    this.totalGame = this.game.length
 
   }
 
