@@ -10,10 +10,15 @@ import { Observable, switchMap } from 'rxjs';
 export class GameServiceService {
 
   private readonly API_URL = 'http://localhost:3000/games'
+  private readonly API_KEY = 'https://api.rawg.io/api/games?key=638c56342dc9447fa2df5184a9ecaf99'
 
   constructor(
     private http: HttpClient
   ) { }
+
+  pegarJogosExternos(){
+    return this.http.get(`${this.API_URL}?key=${this.API_KEY}`)
+  }
 
   cadastrarGame(game: Game): Observable<Game> {
     return this.http.post<Game>(this.API_URL, game)
