@@ -17,7 +17,7 @@ export class GameServiceService {
   ) { }
 
   pegarJogosExternos(){
-    return this.http.get(`${this.API_URL}?key=${this.API_KEY}`)
+    return this.http.get(`${this.API_KEY}`)
   }
 
   cadastrarGame(game: Game): Observable<Game> {
@@ -33,7 +33,7 @@ export class GameServiceService {
   }
 
   editarGame(id: string, game: any): Observable<any> {
-    return this.http.put(`${this.API_URL}/${id}`, game);
+    return this.http.put(`${this.API_KEY}/${id}`, game);
   }
 
 

@@ -1,10 +1,10 @@
+import { Game } from './../../../interfaces/gameInterfaces.models';
 import { RatingModule } from 'primeng/rating';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameServiceService } from '../../../servicos/game-service.service';
-import { Game } from '../../../interfaces/gameInterfaces.models';
 
 
 
@@ -21,6 +21,7 @@ export class GameListComponentComponent {
   gameID: string = ''
   totalGame: number = 0
 
+
   constructor(
     private router: Router,
     private service: GameServiceService,
@@ -28,13 +29,22 @@ export class GameListComponentComponent {
   ) {}
 
   ngOnInit(): void {
-    this.service.getGames().subscribe((games) => {
-      this.game = games
-      this.totalGame = games.length
+
+    this.service.pegarJogosExternos().subscribe((res: any) => {
+      this.game = res.results.map((j: any) => ({
+        id: j.id,
+        title: j.name,
+        genre: j.genres.map((g: any) => g.name).join(', '),
+        imagem: j.background_image,
+        platform: j.platforms.map((p: any) => p.platform.name).join(', '),
+        ratings: []
+      }));
+      this.totalGame = this.game.length;
+
+      console.log( this.game );
     })
 
     this.gameID = String(this.route.snapshot.paramMap.get('id'))
-
 
   }
 
