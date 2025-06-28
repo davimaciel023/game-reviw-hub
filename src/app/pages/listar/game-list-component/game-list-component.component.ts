@@ -51,7 +51,7 @@ export class GameListComponentComponent {
 
     this.gameID = String(this.route.snapshot.paramMap.get('id'))
 
-    this.totalGame = (this.game.length) + (this.gamesLocais.length);
+    this.totalGame = (this.game.length) + (this.gamesLocais.length)
   }
 
   cadastrar() {
