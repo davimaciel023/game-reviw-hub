@@ -32,7 +32,7 @@
     </div>
 
     <div class="card-container">
-      <div class="card" *ngFor="let jogo of game">
+      <div class="card" *ngFor="let jogo of gamesLocais">
         <div class="img-container">
           <img [src]="jogo.imagem" alt="Capa do jogo">
           <button class="btn-detalhes" (click)="detalhes(jogo)">👁️</button>
