@@ -1,26 +1,29 @@
 @use 'variaveis' as *;
+@use 'sass:color';
+
 
 section {
   width: 100%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
 
+  // Botão principal
   .btn {
     display: flex;
-    padding: 2rem;
     justify-content: center;
+    padding: 2rem;
 
     button {
       padding: 0.5rem 1rem;
-      background: $acoes-principais;
-      border: none;
       font-size: 1rem;
-      color: $text-secundary;
       font-weight: 500;
-      cursor: pointer;
+      background: $acoes-principais;
+      color: $text-secundary;
+      border: none;
       border-radius: 0.5rem;
+      cursor: pointer;
       transition: 0.5s;
 
       &:hover {
@@ -31,9 +34,11 @@ section {
     }
   }
 
-  .games {
+  // Bloco de Games (interno ou externo)
+  .games-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: $font-title;
 
     h1 {
@@ -49,22 +54,21 @@ section {
       justify-content: center;
 
       .card {
-        position: relative;
+        width: 300px;
         background: $card-color;
         border-radius: 1rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        transition: transform 0.2s ease-in-out;
         align-items: center;
+        transition: transform 0.2s ease-in-out;
 
         &:hover {
           transform: translateY(-5px);
         }
 
-
+        // Imagem do jogo + botão de detalhes
         .img-container {
           position: relative;
           width: 100%;
@@ -81,26 +85,24 @@ section {
             right: 8px;
             width: 40px;
             height: 40px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.7);
             border: none;
-            background-color: rgba(0,0,0,0.7);
+            border-radius: 50%;
             color: $text-secundary;
             font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
 
             &:hover {
-              background-color: rgba(0,0,0,0.9);
+              background-color: rgba(0, 0, 0, 0.9);
             }
           }
-
         }
 
+        // Informações do jogo
         .info {
           padding: 1rem;
           text-align: center;
@@ -116,11 +118,12 @@ section {
           }
         }
 
+        // Ações (botões)
         .acoes {
           display: flex;
-          justify-content: space-around;
-          padding: 1rem;
+          justify-content: center;
           gap: 15px;
+          padding: 1rem;
 
           button {
             background-color: $acoes-principais;
@@ -129,7 +132,7 @@ section {
             border-radius: 0.5rem;
             padding: 0.8rem 1rem;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: 0.3s;
 
             &:hover {
               background-color: $acoes-hover;
@@ -142,17 +145,20 @@ section {
     }
   }
 
-
+  // Título da seção de detalhes
   .detalhe-h1 {
     margin-top: 5rem;
     font-size: 2rem;
     font-family: $font-title;
   }
 
+  // Bloco com os detalhes (top 5, total, etc)
   .detalhes {
     display: flex;
-    padding: 3rem;
     gap: 2rem;
+    padding: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .tops {
       display: flex;
@@ -162,7 +168,15 @@ section {
       button {
         padding: 1.5rem 2rem;
         font-size: 1.2rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: $card-color;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: color.adjust($card-color, $lightness: 5%);
+        }
       }
     }
 
@@ -170,6 +184,11 @@ section {
       h3 {
         font-size: 1.8rem;
         font-family: $font-title;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
       }
     }
   }

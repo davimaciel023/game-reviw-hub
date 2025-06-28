@@ -20,7 +20,8 @@ export class GameListComponentComponent {
   game: Game[] = []
   gameID: string = ''
   totalGame: number = 0
-
+  gamesExterno: Game[] = []
+  gamesLocais: Game[] = []
 
   constructor(
     private router: Router,
@@ -39,13 +40,17 @@ export class GameListComponentComponent {
         platform: j.platforms.map((p: any) => p.platform.name).join(', '),
         ratings: []
       }));
-      this.totalGame = this.game.length;
 
       console.log( this.game );
     })
 
+    this.service.getGames().subscribe((res: Game[]) =>  {
+      this.gamesLocais = res
+    })
+
     this.gameID = String(this.route.snapshot.paramMap.get('id'))
 
+    this.totalGame = this.game.length;
   }
 
   cadastrar() {

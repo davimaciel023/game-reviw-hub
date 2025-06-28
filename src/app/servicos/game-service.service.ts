@@ -33,7 +33,7 @@ export class GameServiceService {
   }
 
   editarGame(id: string, game: any): Observable<any> {
-    return this.http.put(`${this.API_KEY}/${id}`, game);
+    return this.http.put(`${this.API_URL}/${id}`, game);
   }
 
 

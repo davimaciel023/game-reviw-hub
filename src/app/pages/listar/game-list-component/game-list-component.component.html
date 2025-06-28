@@ -1,52 +1,73 @@
-<section>
+<section class="game-section">
 
-  <div class="games">
-    <h1>Games</h1>
-
-    <div class="btn">
-      <button (click)="cadastrar()">Cadastrar Game</button>
-    </div>
-
+  <!-- 🎮 Jogos Populares (API Externa) -->
+  <div class="games-block">
+    <h1>Jogos Populares</h1>
     <div class="card-container">
-
-      <div class="card" *ngFor="let jogo of game">
+      <div class="card" *ngFor="let jogo of gamesExterno">
         <div class="img-container">
-          <img [src]="jogo.imagem" alt="">
+          <img [src]="jogo.imagem" alt="Capa do jogo">
           <button class="btn-detalhes" (click)="detalhes(jogo)">👁️</button>
         </div>
-
-
         <div class="info">
           <h3>{{ jogo.title }}</h3>
-          <p> {{ jogo.genre }} </p>
+          <p>{{ jogo.genre }}</p>
           <p-rating
             [ngModel]="mediaAvaliacao(jogo)"
             [readonly]="true"
             [cancel]="false"
-            [disabled]="true"
-          ></p-rating>
-          <p>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }} </p>
-
-        </div>
-        <div class="acoes">
-          <button class="btn" (click)="avaliacoes(jogo)">Avaliar</button>
-          <button class="btn" (click)="editar(jogo)">Editar</button>
-          <button class="btn" (click)="excluir(jogo)">Excluir</button>
+            [disabled]="true">
+          </p-rating>
+          <p>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }}</p>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- 📁 Meus Jogos (DB Local) -->
+  <div class="games-block">
+    <h1>Meus Jogos</h1>
+    <div class="btn">
+      <button (click)="cadastrar()">Cadastrar Game</button>
+    </div>
 
-  <h1 class="detalhe-h1">Detalhes</h1>
+    <div class="card-container">
+      <div class="card" *ngFor="let jogo of game">
+        <div class="img-container">
+          <img [src]="jogo.imagem" alt="Capa do jogo">
+          <button class="btn-detalhes" (click)="detalhes(jogo)">👁️</button>
+        </div>
+        <div class="info">
+          <h3>{{ jogo.title }}</h3>
+          <p>{{ jogo.genre }}</p>
+          <p-rating
+            [ngModel]="mediaAvaliacao(jogo)"
+            [readonly]="true"
+            [cancel]="false"
+            [disabled]="true">
+          </p-rating>
+          <p>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }}</p>
+        </div>
+        <div class="acoes">
+          <button (click)="avaliacoes(jogo)">Avaliar</button>
+          <button (click)="editar(jogo)">Editar</button>
+          <button (click)="excluir(jogo)">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📊 Estatísticas -->
   <div class="detalhes">
+    <h1>Detalhes</h1>
     <div class="tops">
       <button>Top 5 Games</button>
-      <button>Todas as Reviws</button>
+      <button>Todas as Reviews</button>
     </div>
     <div class="totalGame">
       <h3>Total de Games</h3>
-      <p> {{ totalGame }} </p>
+      <p>{{ totalGame }}</p>
     </div>
   </div>
+
 </section>
