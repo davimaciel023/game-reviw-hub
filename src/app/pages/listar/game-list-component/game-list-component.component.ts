@@ -42,6 +42,7 @@ export class GameListComponentComponent {
       }));
 
       console.log( this.game );
+      console.log(this.gamesLocais)
     })
 
     this.service.getGames().subscribe((res: Game[]) =>  {
@@ -50,7 +51,7 @@ export class GameListComponentComponent {
 
     this.gameID = String(this.route.snapshot.paramMap.get('id'))
 
-    this.totalGame = this.game.length;
+    this.totalGame = (this.game.length) + (this.gamesLocais.length);
   }
 
   cadastrar() {

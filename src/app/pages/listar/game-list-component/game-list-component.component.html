@@ -4,7 +4,7 @@
   <div class="games-block">
     <h1>Jogos Populares</h1>
     <div class="card-container">
-      <div class="card" *ngFor="let jogo of gamesExterno">
+      <div class="card" *ngFor="let jogo of game">
         <div class="img-container">
           <img [src]="jogo.imagem" alt="Capa do jogo">
           <button class="btn-detalhes" (click)="detalhes(jogo)">👁️</button>
@@ -12,19 +12,11 @@
         <div class="info">
           <h3>{{ jogo.title }}</h3>
           <p>{{ jogo.genre }}</p>
-          <p-rating
-            [ngModel]="mediaAvaliacao(jogo)"
-            [readonly]="true"
-            [cancel]="false"
-            [disabled]="true">
-          </p-rating>
-          <p>Média: {{ mediaAvaliacao(jogo) | number: '1.1-1' }}</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 📁 Meus Jogos (DB Local) -->
   <div class="games-block">
     <h1>Meus Jogos</h1>
     <div class="btn">
@@ -57,7 +49,6 @@
     </div>
   </div>
 
-  <!-- 📊 Estatísticas -->
   <div class="detalhes">
     <h1>Detalhes</h1>
     <div class="tops">
