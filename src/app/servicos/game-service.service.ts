@@ -32,6 +32,10 @@ export class GameServiceService {
     return this.http.get<Game>(`${this.API_URL}/${id}`)
   }
 
+  pegarPorIdExterno(id: string): Observable<Game>{
+    return this.http.get<Game>(`${this.API_URL}/${id}`)
+  }
+
   editarGame(id: string, game: any): Observable<any> {
     return this.http.put(`${this.API_URL}/${id}`, game);
   }
