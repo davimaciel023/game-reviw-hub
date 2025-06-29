@@ -1,14 +1,14 @@
-<section class="detalhes-externo">
-  <div class="container" *ngIf="game">
-    <img [src]="game.background_image" alt="Imagem do jogo">
-    <div class="info">
-      <h1>{{ game.name }}</h1>
-      <p><strong>Gêneros:</strong> {{ game.genres.map(g => g.name).join(', ') }}</p>
-      <p><strong>Plataformas:</strong> {{ game.platforms.map(p => p.platform.name).join(', ') }}</p>
-      <p><strong>Lançamento:</strong> {{ game.released }}</p>
-      <p><strong>Avaliação:</strong> {{ game.rating }} / 5</p>
-      <p><strong>Descrição:</strong></p>
-      <p [innerHTML]="game.description"></p>
-    </div>
-  </div>
-</section>
+<div *ngIf="game; else erroCarregamento">
+  <h1>{{ game.name }}</h1>
+  <img [src]="game.background_image" alt="{{ game.name }}" />
+  <p><strong>Gêneros:</strong> {{ generos }}</p>
+  <p><strong>Plataformas:</strong> {{ plataformas }}</p>
+  <p><strong>Lançamento:</strong> {{ game.released }}</p>
+  <p><strong>Avaliação:</strong> {{ game.rating }} / 5</p>
+  <p><strong>Descrição:</strong></p>
+  <p [innerHTML]="game.description"></p>
+</div>
+
+<ng-template #erroCarregamento>
+  <p>⛔ O jogo não pôde ser carregado.</p>
+</ng-template>
