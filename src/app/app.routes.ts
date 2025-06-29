@@ -20,6 +20,10 @@ export const routes: Routes = [
     component: GameDetailComponentComponent
   },
   {
+    path: 'externo/:id',
+    component: GameDetailComponentComponent
+  },
+  {
     path: 'form',
     component: GameFormComponentComponent
   },

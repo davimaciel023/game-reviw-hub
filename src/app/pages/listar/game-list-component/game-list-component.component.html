@@ -3,10 +3,10 @@
   <div class="games-block">
     <h1>Jogos Populares</h1>
     <div class="card-container">
-      <div class="card" *ngFor="let jogo of game">
+      <div class="card" *ngFor="let jogo of gamesExterno">
         <div class="img-container">
           <img [src]="jogo.imagem" alt="Capa do jogo">
-          <button class="btn-detalhes" (click)="detalhes(jogo)">👁️</button>
+          <button class="btn-detalhes" (click)="detalhesExterno(jogo.id)">👁️</button>
         </div>
         <div class="info">
           <h3>{{ jogo.title }}</h3>
