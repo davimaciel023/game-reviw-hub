@@ -24,23 +24,15 @@ export class DetalhesExternosComponent {
 
   ngOnInit(): void {
   const id = this.route.snapshot.paramMap.get('id');
-
-  if (!id) {
-    alert('ID inválido!');
-    return;
-  }
-
+  console.log('ID recebido:', id); // <-- debug
   this.http.get(`https://api.rawg.io/api/games/${id}?key=${this.API_KEY}`).subscribe({
     next: (res: any) => {
       this.game = res;
-      this.generos = res.genres?.map((g: any) => g.name).join(', ') || '';
-      this.plataformas = res.platforms?.map((p: any) => p.platform.name).join(', ') || '';
     },
     error: (err) => {
       console.error('Erro ao carregar jogo externo:', err);
-      alert('Não foi possível carregar os detalhes do jogo.');
+      alert('Não foi possível carregar o jogo');
     }
   });
 }
-
 }

@@ -4,6 +4,7 @@ import { GameDetailComponentComponent } from './pages/detalhes/game-detail-compo
 import { GameFormComponentComponent } from './pages/form/game-form-component/game-form-component.component';
 import { TopGamesComponentComponent } from './pages/topGames/top-games-component/top-games-component.component';
 import { RatingFormComponentComponent } from './pages/rating/rating-form-component/rating-form-component.component';
+import { DetalhesExternosComponent } from './pages/detalhes/detalhes-externos.component';
 
 export const routes: Routes = [
   {
@@ -21,7 +22,7 @@ export const routes: Routes = [
   },
   {
     path: 'externo/:id',
-    component: GameDetailComponentComponent
+    component: DetalhesExternosComponent
   },
   {
     path: 'form',
