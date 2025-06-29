@@ -30,7 +30,6 @@ export class DetalhesExternosComponent {
     this.generos = res.genres.map((g: any) => g.name).join(', ');
     this.plataformas = res.platforms.map((p: any) => p.platform.name).join(', ');
 
-    // Tradução da descrição
     this.traduzirDescricao(res.description_raw).subscribe((traduzido: any) => {
       this.game.description = traduzido.translatedText;
     });
