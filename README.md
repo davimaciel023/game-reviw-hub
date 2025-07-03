@@ -48,8 +48,8 @@ O objetivo do projeto é integrar e demonstrar o consumo de APIs externas, utili
 ### 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/games-explorer.git
-cd games-explorer
+git clone https://github.com/davimaciel023/game-reviw-hub.git
+cd games-review-hub
 ```
 
 ---
