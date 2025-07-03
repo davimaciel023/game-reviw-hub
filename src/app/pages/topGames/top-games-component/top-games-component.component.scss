@@ -1,0 +1,62 @@
+.top-games {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .game-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+      color: #ffcc00;
+    }
+  }
+
+  .btn-voltar {
+    background-color: #222;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+
+}

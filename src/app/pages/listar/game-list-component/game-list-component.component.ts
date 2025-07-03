@@ -92,4 +92,8 @@ export class GameListComponentComponent {
       }
     });
   }
+
+  topGames() {
+    this.router.navigate(['/topGames'])
+  }
 }

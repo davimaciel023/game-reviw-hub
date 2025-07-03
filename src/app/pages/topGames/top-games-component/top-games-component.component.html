@@ -1,0 +1,14 @@
+<section class="top-games">
+  <h2>🔥 Top Games</h2>
+  <div class="games-grid">
+    <div class="game-card" *ngFor="let jogo of jogos">
+      <img [src]="jogo.background_image" alt="Imagem do jogo" />
+      <h3>{{ jogo.name }}</h3>
+      <p>⭐ {{ jogo.rating }}/5</p>
+    </div>
+  </div>
+  <button class="btn-voltar" (click)="voltar()">
+  ⬅️ Voltar
+  </button>
+
+</section>
