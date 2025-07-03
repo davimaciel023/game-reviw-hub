@@ -6,7 +6,7 @@
   <p><strong>Lançamento:</strong> {{ game.released }}</p>
   <p><strong>Avaliação:</strong> {{ game.rating }} / 5</p>
   <p><strong>Descrição:</strong></p>
-  <p [innerHTML]="game.description"></p>
+  <p>{{descricaoTraduzida}}</p>
 </div>
 
 <ng-template #erroCarregamento>
