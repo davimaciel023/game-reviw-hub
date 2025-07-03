@@ -8,20 +8,17 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Rota para tradução
 app.post('/traduzir', async (req, res) => {
   try {
     const { q, source, target, format } = req.body;
 
-    const response = await axios.post('https://translate.astian.org/translate', {
+    const response = await axios.post('https://libretranslate.de/translate', {
       q,
       source,
       target,
       format
     }, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      headers: { 'Content-Type': 'application/json' }
     });
 
     res.json(response.data);
