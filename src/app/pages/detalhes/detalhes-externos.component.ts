@@ -42,7 +42,8 @@ export class DetalhesExternosComponent {
       format: 'text'
     };
 
-    this.http.post<any>('https://translate.astian.org/translate', body, { headers })
+    this.http.post<any>('http://localhost:3001/traduzir', body, { headers })
+
       .subscribe({
         next: (res) => {
           this.descricaoTraduzida = res.translatedText;
